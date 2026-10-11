@@ -1,0 +1,7 @@
+.glow {
+  position: fixed; top: 0; left: 0; width: 520px; height: 520px; z-index: 0; pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 13%, transparent), transparent 65%);
+  will-change: transform;
+}
+@media (hover: none) { .glow { display: none; } }

@@ -1,0 +1,5 @@
+.section { padding: clamp(72px, 10vw, 128px) 0; }
+.inner { width: min(1120px, 100% - 48px); margin-inline: auto; }
+.header { max-width: 640px; margin-bottom: clamp(32px, 5vw, 56px); }
+.title { font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -0.02em; }
+.intro { margin-top: 16px; color: var(--muted); max-width: 56ch; }

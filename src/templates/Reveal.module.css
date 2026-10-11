@@ -1,0 +1,6 @@
+.reveal {
+  opacity: 0; transform: translateY(36px) scale(0.98); filter: blur(6px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease), filter 0.9s var(--ease);
+}
+.in { opacity: 1; transform: none; filter: none; }
+.fill { height: 100%; }

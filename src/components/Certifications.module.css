@@ -1,0 +1,25 @@
+.filters { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 12px; }
+.field { display: grid; gap: 6px; flex: 1 1 220px; max-width: 360px; }
+.field span { font-size: 0.9rem; color: var(--muted); font-weight: 600; }
+.field input, .field select {
+  padding: 13px 16px; border-radius: var(--radius-sm); background: var(--surface);
+  border: 1px solid var(--line); transition: border-color 0.2s, background-color 0.2s;
+}
+.field select option { background: var(--bg-raised); color: var(--text); }
+.field input:hover, .field select:hover { border-color: var(--muted); }
+.field input:focus, .field select:focus { border-color: var(--accent); outline: none; background: var(--surface-strong); }
+.count { color: var(--muted); font-size: 0.9rem; margin: 8px 0 24px; }
+.empty { padding: 32px; border: 1px dashed var(--line); border-radius: var(--radius-lg); color: var(--muted); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+.grid > li { display: flex; }
+.cert { height: 100%; display: flex; flex-direction: column; gap: 12px; }
+.cert h3 { font-size: 1.35rem; line-height: 1.25; }
+.top { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 0.9rem; }
+.type {
+  padding: 3px 12px; border-radius: 999px; font-weight: 700; font-size: 0.82rem;
+  background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--accent-text);
+}
+.issuer { color: var(--muted); font-weight: 600; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); }
+.tags li { padding: 4px 12px; border-radius: 999px; background: var(--surface-strong); font-size: 0.82rem; font-weight: 600; }

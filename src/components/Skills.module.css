@@ -1,0 +1,19 @@
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+.grid > li { display: flex; }
+.group { height: 100%; display: flex; flex-direction: column; gap: 10px; }
+.head { display: flex; align-items: center; justify-content: space-between; }
+.head h3 { font-size: 1.5rem; }
+.count {
+  min-width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--accent-text); font-weight: 700; font-size: 0.9rem;
+}
+.blurb { color: var(--muted); margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+.chips li {
+  padding: 8px 16px; border-radius: 999px; font-weight: 600; font-size: 0.95rem;
+  background: var(--surface-strong); border: 1px solid var(--line);
+  opacity: 0; transform: translateY(14px) scale(0.92);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease), border-color 0.25s, background-color 0.25s;
+}
+.visible li { opacity: 1; transform: none; transition-delay: calc(var(--i) * 70ms), calc(var(--i) * 70ms), 0s, 0s; }
+.chips li:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }

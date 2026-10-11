@@ -1,0 +1,9 @@
+.banner { position: absolute; inset: -12%; display: grid; place-items: center; pointer-events: none; }
+.svg { width: 100%; height: 100%; overflow: visible; }
+.ring { fill: none; stroke: var(--text); stroke-opacity: 0.16; stroke-width: 1.5; }
+.dashed { stroke-dasharray: 4 10; }
+.orbitA, .orbitB, .orbitC { transform-origin: 300px 300px; }
+.orbitA { animation: spin 22s linear infinite; }
+.orbitB { animation: spin 34s linear infinite reverse; }
+.orbitC { animation: spin 48s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }

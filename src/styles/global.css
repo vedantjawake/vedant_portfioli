@@ -1,0 +1,95 @@
+:root {
+  --bg: #0d1128;
+  --bg-raised: #141a3a;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-strong: rgba(255, 255, 255, 0.08);
+  --line: rgba(236, 238, 255, 0.12);
+  --text: #eceeff;
+  --muted: #9aa0c7;
+  --accent: #ffb547;
+  --accent-ink: #1a1203;
+  --accent-text: #ffb547;
+  --mint: #6ee7c8;
+  --danger: #ff8a8a;
+  --shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --radius-sm: 10px;
+  --radius-lg: 24px;
+  --nav-h: 72px;
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --bg: #f6f5fb;
+  --bg-raised: #ffffff;
+  --surface: rgba(20, 24, 58, 0.04);
+  --surface-strong: rgba(20, 24, 58, 0.08);
+  --line: rgba(20, 24, 58, 0.14);
+  --text: #14183a;
+  --muted: #565c85;
+  --accent: #e8920c;
+  --accent-ink: #1a1203;
+  --accent-text: #a55a00;
+  --mint: #0f9f7e;
+  --danger: #c0323a;
+  --shadow: 0 30px 60px -34px rgba(20, 24, 58, 0.35);
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s var(--ease), color 0.4s var(--ease);
+}
+
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; margin: 0; font-weight: 700; }
+p { margin: 0; }
+a { color: inherit; }
+ul { list-style: none; margin: 0; padding: 0; }
+button, input, select, textarea { font: inherit; color: inherit; }
+
+:focus-visible { outline: 3px solid var(--mint); outline-offset: 3px; border-radius: 6px; }
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+.skip-link {
+  position: fixed; left: 16px; top: -60px; z-index: 100;
+  background: var(--accent); color: var(--accent-ink);
+  padding: 10px 16px; border-radius: var(--radius-sm); font-weight: 700;
+  transition: top 0.2s var(--ease);
+}
+.skip-link:focus { top: 12px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Faint engineering grid behind everything */
+body::before {
+  content: ''; position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 72px 72px; opacity: 0.35;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 20%, #000 10%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 50% 20%, #000 10%, transparent 75%);
+}
+main, footer { position: relative; z-index: 1; }

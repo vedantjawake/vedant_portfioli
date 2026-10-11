@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB547"/><stop offset="1" stop-color="#6EE7C8"/></linearGradient>
+    <radialGradient id="glow" cx="75%" cy="45%" r="60%"><stop offset="0" stop-color="#2A3270"/><stop offset="1" stop-color="#0D1128"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g fill="none" stroke="#ECEEFF" stroke-opacity=".18" stroke-width="2">
+    <circle cx="900" cy="300" r="120"/><circle cx="900" cy="300" r="200" stroke-dasharray="6 10"/><circle cx="900" cy="300" r="280"/>
+  </g>
+  <g stroke="#6EE7C8" stroke-opacity=".35" stroke-width="1.5"><path d="M760 162L900 300L1020 300M900 300L900 580M760 162L640 240"/></g>
+  <circle cx="1020" cy="300" r="10" fill="#FFB547"/><circle cx="760" cy="162" r="8" fill="#6EE7C8"/><circle cx="900" cy="580" r="7" fill="#ECEEFF"/><circle cx="640" cy="240" r="6" fill="#FFB547"/>
+  <text x="80" y="280" font-family="Georgia, serif" font-weight="700" font-size="88" fill="#ECEEFF">Vedant Jawake</text>
+  <text x="84" y="350" font-family="Arial, sans-serif" font-size="34" fill="url(#g)">Full-Stack &amp; AI Developer</text>
+  <text x="84" y="410" font-family="Arial, sans-serif" font-size="24" fill="#9AA0C7">MCA Student · React · Node.js · Python</text>
+</svg>
